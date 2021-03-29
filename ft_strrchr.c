@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: frouable <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: frouable <frouable@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 16:05:24 by frouable          #+#    #+#             */
-/*   Updated: 2021/03/25 15:07:05 by frouable         ###   ########.fr       */
+/*   Updated: 2021/03/29 14:48:21 by frouable         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include	"libft.h"
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -23,6 +24,8 @@ char	*ft_strrchr(const char *s, int c)
 	tempo = (char *)s;
 	if (c == 0)
 		return (tempo + length);
+	if (c > 255)
+		return (tempo);
 	tempo = tempo + length - 1;
 	index = length - 1;
 	while (index >= 0 )

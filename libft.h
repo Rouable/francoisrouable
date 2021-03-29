@@ -6,7 +6,7 @@
 /*   By: frouable <frouable@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 10:16:52 by frouable          #+#    #+#             */
-/*   Updated: 2021/03/29 11:57:35 by frouable         ###   ########.fr       */
+/*   Updated: 2021/03/29 12:47:04 by frouable         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdlib.h>
 
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
