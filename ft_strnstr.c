@@ -6,13 +6,13 @@
 /*   By: frouable <frouable@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 10:58:23 by frouable          #+#    #+#             */
-/*   Updated: 2021/03/29 17:38:23 by frouable         ###   ########.fr       */
+/*   Updated: 2021/03/31 09:28:52 by frouable         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*tempo_strnstr(char *myhaystack, const char *needle, size_t len)
+static char	*tempo_strnstr(char *myhaystack, const char *needle, size_t len)
 {
 	size_t	indexcible;
 	size_t	indexsource;
