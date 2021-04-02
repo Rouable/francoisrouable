@@ -6,7 +6,7 @@
 /*   By: frouable <frouable@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 10:16:52 by frouable          #+#    #+#             */
-/*   Updated: 2021/03/29 17:19:25 by frouable         ###   ########.fr       */
+/*   Updated: 2021/04/02 15:14:23 by frouable         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <limits.h>
 
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
