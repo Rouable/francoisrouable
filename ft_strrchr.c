@@ -6,7 +6,7 @@
 /*   By: frouable <frouable@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 16:05:24 by frouable          #+#    #+#             */
-/*   Updated: 2021/03/29 14:48:21 by frouable         ###   ########.fr       */
+/*   Updated: 2021/04/07 12:09:58 by frouable         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		length;
-	int		index;
-	char	*tempo;
+	size_t			index;
+	unsigned char	*last;
 
-	length = ft_strlen(s);
-	if (length == 0)
-		return (NULL);
-	tempo = (char *)s;
-	if (c == 0)
-		return (tempo + length);
-	if (c > 255)
-		return (tempo);
-	tempo = tempo + length - 1;
-	index = length - 1;
-	while (index >= 0 )
+	index = 0;
+	last = NULL;
+	while (1)
 	{
-		if (*tempo == c)
-		{
-			return (tempo);
-		}
-		tempo--;
-		index--;
+		if (s[index] == (char) c)
+			last = (unsigned char *)(s + index);
+		if (s[index] == '\0')
+			break ;
+		index++;
 	}
-	return (NULL);
+	return ((char *)last);
 }
