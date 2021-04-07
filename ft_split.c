@@ -6,11 +6,12 @@
 /*   By: frouable <frouable@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 09:56:36 by frouable          #+#    #+#             */
-/*   Updated: 2021/04/02 11:10:28 by frouable         ###   ########.fr       */
+/*   Updated: 2021/04/07 09:04:14 by frouable         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static size_t	countingword(char const *s, char c)
 {
@@ -50,6 +51,8 @@ static char	**createtab(char const *s, int c)
 	size_t	nbword;
 	char	**desti;
 
+	if (s == NULL)
+		return (NULL);
 	nbword = countingword(s, c) + 1;
 	desti = malloc(sizeof(char *) * nbword);
 	if (desti == NULL)
