@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: frouable <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: frouable <frouable@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/06 16:45:17 by frouable          #+#    #+#             */
-/*   Updated: 2021/04/06 16:46:07 by frouable         ###   ########.fr       */
+/*   Updated: 2021/04/07 10:48:03 by frouable         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('-', fd);
 		number *= -1;
 	}
-	if (number > 10)
+	if (number >= 10)
 		ft_putnbr_fd(number / 10, fd);
 	ft_putchar_fd('0' + (number % 10), fd);
 }
